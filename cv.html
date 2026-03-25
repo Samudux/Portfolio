@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Almeida — CV</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --color-ink: #0f0f0f;
+            --color-ink-secondary: #444;
+            --color-ink-tertiary: #888;
+            --color-accent: #c0392b;
+            --color-border: #e0e0e0;
+            --font-serif: 'DM Serif Display', Georgia, serif;
+            --font-sans: 'Manrope', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: #fff;
+            color: var(--color-ink);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* ---- PRINT BUTTON (hidden when printing) ---- */
+        .print-bar {
+            background: var(--color-ink);
+            color: #fff;
+            padding: 0.75rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: var(--font-mono);
+            font-size: 12px;
+        }
+        .print-bar a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.6;
+            transition: opacity 0.2s;
+        }
+        .print-bar a:hover { opacity: 1; }
+        .print-btn {
+            background: var(--color-accent);
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1.25rem;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+        }
+        .print-btn:hover { opacity: 0.85; }
+
+        @media print {
+            .print-bar { display: none; }
+            body { font-size: 12px; }
+        }
+
+        /* ---- LAYOUT ---- */
+        .cv-page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2.5rem;
+        }
+
+        /* ---- HEADER ---- */
+        .cv-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--color-ink);
+            margin-bottom: 2rem;
+        }
+        .cv-name {
+            font-family: var(--font-serif);
+            font-size: 2.25rem;
+            line-height: 1.1;
+            color: var(--color-ink);
+        }
+        .cv-title {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            color: var(--color-accent);
+            margin-top: 0.4rem;
+            text-transform: uppercase;
+        }
+        .cv-contact {
+            text-align: right;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--color-ink-secondary);
+            line-height: 2;
+        }
+        .cv-contact a {
+            color: var(--color-ink-secondary);
+            text-decoration: none;
+        }
+        .cv-contact a:hover { color: var(--color-accent); }
+
+        /* ---- SECTIONS ---- */
+        .cv-section {
+            margin-bottom: 2rem;
+        }
+        .cv-section-title {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-ink-tertiary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        /* ---- PROFILE ---- */
+        .cv-profile p {
+            color: var(--color-ink-secondary);
+            line-height: 1.7;
+            max-width: 640px;
+        }
+
+        /* ---- SKILLS ---- */
+        .cv-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .cv-skill {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            padding: 0.3rem 0.75rem;
+            border: 1px solid var(--color-border);
+            color: var(--color-ink-secondary);
+        }
+
+        /* ---- PROJECTS ---- */
+        .cv-project {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .cv-project:last-child { border-bottom: none; }
+        .cv-project-meta {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            letter-spacing: 0.05em;
+            color: var(--color-ink-tertiary);
+            text-transform: uppercase;
+            padding-top: 0.15rem;
+        }
+        .cv-project-title {
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--color-ink);
+            margin-bottom: 0.3rem;
+        }
+        .cv-project-desc {
+            font-size: 12px;
+            color: var(--color-ink-secondary);
+            line-height: 1.6;
+        }
+
+        /* ---- EDUCATION ---- */
+        .cv-edu-item {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 1rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .cv-edu-item:last-child { border-bottom: none; }
+        .cv-edu-meta {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            letter-spacing: 0.05em;
+            color: var(--color-ink-tertiary);
+            text-transform: uppercase;
+            padding-top: 0.15rem;
+        }
+        .cv-edu-title {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--color-ink);
+            margin-bottom: 0.2rem;
+        }
+        .cv-edu-institution {
+            font-size: 12px;
+            color: var(--color-ink-secondary);
+        }
+    </style>
+</head>
+<body>
+
+<div class="print-bar">
+    <a href="index.html">← Back to portfolio</a>
+    <button class="print-btn" onclick="window.print()">SAVE AS PDF</button>
+</div>
+
+<div class="cv-page">
+
+    <!-- Header -->
+    <header class="cv-header">
+        <div>
+            <h1 class="cv-name">Samuel Almeida</h1>
+            <p class="cv-title">Product Designer (UX/UI)</p>
+        </div>
+        <div class="cv-contact">
+            <a href="mailto:samudux66@gmail.com">samudux66@gmail.com</a><br>
+            <a href="https://www.linkedin.com/in/samuel-almeida-27a087388/" target="_blank">LinkedIn</a><br>
+            <a href="https://x.com/Samuel151093" target="_blank">X</a><br>
+            <a href="https://samudux.github.io/Portfolio/" target="_blank">Portfolio</a>
+        </div>
+    </header>
+
+    <!-- Profile -->
+    <section class="cv-section">
+        <h2 class="cv-section-title">Profile</h2>
+        <div class="cv-profile">
+            <p>
+                Product Designer focused on UX/UI, with a background in graphic design and front-end development.
+                I work at the intersection of structure, clarity and product thinking — turning complex problems
+                into clear, functional experiences. I work in short, focused cycles and use AI as a workflow
+                accelerator to spend more time on the decisions that actually matter.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="cv-section">
+        <h2 class="cv-section-title">Skills</h2>
+        <div class="cv-skills">
+            <span class="cv-skill">UX Strategy</span>
+            <span class="cv-skill">UI Design</span>
+            <span class="cv-skill">Product Thinking</span>
+            <span class="cv-skill">Information Architecture</span>
+            <span class="cv-skill">Usability & Testing</span>
+            <span class="cv-skill">Front-end (HTML · CSS · JS)</span>
+            <span class="cv-skill">AI-Accelerated Workflow</span>
+            <span class="cv-skill">Structured Iteration</span>
+            <span class="cv-skill">Figma</span>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="cv-section">
+        <h2 class="cv-section-title">Selected Projects</h2>
+
+        <div class="cv-project">
+            <div class="cv-project-meta">Product Intelligence · AI</div>
+            <div>
+                <p class="cv-project-title">UXRay — Product Intelligence Engine</p>
+                <p class="cv-project-desc">
+                    Designed and built an AI-powered engine that analyzes digital products and extracts
+                    structural models — mental model, growth model, product moat and strategic signals.
+                    Key decisions: fixed analysis pipeline, separation between generation and interpretation,
+                    confidence as a required signal, expandable graph layer.
+                </p>
+            </div>
+        </div>
+
+        <div class="cv-project">
+            <div class="cv-project-meta">Real Project · SaaS · Health UX</div>
+            <div>
+                <p class="cv-project-title">TicCare — Behavioral Tracking Platform</p>
+                <p class="cv-project-desc">
+                    UX/UI design for a behavioral tracking platform for tic disorders, adapting language,
+                    tone and visual complexity based on the user's age group — children, adults and caregivers.
+                    Focused on minimal registration flow, priority hierarchy and context-driven content.
+                </p>
+            </div>
+        </div>
+
+        <div class="cv-project">
+            <div class="cv-project-meta">B2B · Strategy · Research</div>
+            <div>
+                <p class="cv-project-title">Commercial VPS — Applied Engineering in the Field</p>
+                <p class="cv-project-desc">
+                    Strategic repositioning of a B2B industrial company's digital presence — from product
+                    catalog to consultative, diagnosis-first platform. Included competitive analysis of
+                    5 players and empathy mapping of two B2B visitor profiles. Core decision:
+                    solution before catalog.
+                </p>
+            </div>
+        </div>
+
+        <div class="cv-project">
+            <div class="cv-project-meta">Real Project · Health UX</div>
+            <div>
+                <p class="cv-project-title">Clínica Patvelloso — Clinical UX for Mental Health</p>
+                <p class="cv-project-desc">
+                    Website design for a clinical psychologist specialized in TCC and CBIT. Core challenge:
+                    communicating strong scientific credentials while ensuring visitors in emotional distress
+                    feel safe enough to take the first step. Added a reflection exercise as a product feature
+                    extending value before the first session.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Education -->
+    <section class="cv-section">
+        <h2 class="cv-section-title">Education</h2>
+
+        <div class="cv-edu-item">
+            <div class="cv-edu-meta">In progress</div>
+            <div>
+                <p class="cv-edu-title">Digital Design & User Experience</p>
+                <p class="cv-edu-institution">Higher Education Institution — Bachelor's Degree</p>
+            </div>
+        </div>
+
+        <div class="cv-edu-item">
+            <div class="cv-edu-meta">Supplementary</div>
+            <div>
+                <p class="cv-edu-title">UI/UX Design</p>
+                <p class="cv-edu-institution">Origamid & Specialized Platforms</p>
+            </div>
+        </div>
+
+        <div class="cv-edu-item">
+            <div class="cv-edu-meta">Supplementary</div>
+            <div>
+                <p class="cv-edu-title">Graphic Design & Front-End Development</p>
+                <p class="cv-edu-institution">Self-directed Learning — HTML, CSS, JavaScript</p>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>

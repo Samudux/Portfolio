@@ -331,6 +331,26 @@ section[id] {
     color: var(--color-accent);
 }
 
+.cta-button-secondary {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: transparent;
+    color: var(--color-text-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.9s forwards;
+    margin-left: 1rem;
+}
+
+.cta-button-secondary:hover {
+    border-color: var(--color-text-primary);
+    color: var(--color-text-primary);
+}
+
 /* ============================================================
    SECTION HEADER
    ============================================================ */
