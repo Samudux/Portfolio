@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicCare — Samuel Almeida</title>
-    <meta name="description" content="TicCare — Plataforma SaaS de acompanhamento comportamental. Case study por Samuel Almeida, Product Designer." />
+    <meta name="description" content="TicCare — Behavioral tracking platform. Case study by Samuel Almeida, Product Designer." />
 
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -37,56 +37,196 @@
     <section class="case-hero">
     <div class="portfolio-container">
 
-        <a href="index.html#work" class="project-back-link">← Voltar aos projetos</a>
+        <a href="index.html#work" class="project-back-link">← Back to projects</a>
 
         <div class="case-hero-content scroll-reveal">
             <div class="case-meta">
-                <span class="case-tag">PROJETO REAL</span>
+                <span class="case-tag">REAL PROJECT</span>
                 <span class="case-tag">SAAS</span>
-                <span class="case-tag">UX/UI</span>
+                <span class="case-tag">HEALTH UX</span>
             </div>
             <h1 class="case-title">TicCare</h1>
-            <p class="case-subtitle">Plataforma de acompanhamento comportamental</p>
-            <p class="case-intro">
-                SaaS desenvolvido para ajudar profissionais e famílias a registrar tiques
-                comportamentais e acompanhar a evolução do tratamento.
-            </p>
+            <p class="case-subtitle">Behavioral tracking platform</p>
         </div>
 
         <div class="case-hero-image scroll-reveal" style="max-width: 960px; margin: 0 auto;">
-            <img src="assets/ticcare-laptop-mockup.png" alt="TicCare Dashboard" loading="lazy">
+            <img src="assets/ticcare-laptop-mockup.png" alt="TicCare — Behavioral tracking platform" loading="lazy">
         </div>
 
     </div>
     </section>
 
-    <!-- Problema & Solução -->
+    <!-- 1. Context -->
+    <section class="case-section">
+    <div class="portfolio-container">
+        <div class="case-block--narrow scroll-reveal">
+            <h3 class="case-label">Context</h3>
+            <p class="case-text">
+                TicCare was designed to support patients and families in understanding and managing
+                tic behaviors over time. The system adapts to different age groups, adjusting both
+                content and language to match the user's context.
+            </p>
+        </div>
+    </div>
+    </section>
+
+    <!-- 2. Problem & Solution -->
     <section class="case-section">
     <div class="portfolio-container">
         <div class="case-two-col">
             <div class="case-block scroll-reveal">
-                <h3 class="case-label">Problema</h3>
+                <h3 class="case-label">Problem</h3>
                 <p class="case-text">
-                    Famílias e profissionais de saúde precisam acompanhar a evolução de tiques
-                    comportamentais ao longo do tempo. Grande parte desse acompanhamento ainda é
-                    feito com registros manuais ou anotações fragmentadas, dificultando a análise
-                    e o acompanhamento do tratamento.
+                    Tracking tics is often inconsistent, subjective and difficult to interpret.
+                    Additionally, the same information is not equally understandable for children,
+                    adults or caregivers. This creates gaps in communication and reduces the
+                    effectiveness of treatment.
                 </p>
             </div>
             <div class="case-block scroll-reveal">
-                <h3 class="case-label">Solução</h3>
+                <h3 class="case-label">Solution</h3>
                 <p class="case-text">
-                    O TicCare foi desenvolvido como uma plataforma SaaS para registrar, organizar
-                    e acompanhar a evolução dos tiques de forma estruturada. A plataforma combina
-                    registro diário, organização por hierarquia e visualização de progresso para
-                    apoiar o acompanhamento clínico.
+                    TicCare combines structured tracking with adaptive guidance. Based on user input,
+                    the system organizes priorities and adjusts content dynamically — including language,
+                    depth and recommendations — according to age and context. This ensures the experience
+                    remains accessible for children and useful for adults and specialists.
                 </p>
             </div>
         </div>
     </div>
     </section>
 
-    <!-- Interface -->
+    <!-- 3. Product Decisions -->
+    <section class="case-section">
+    <div class="portfolio-container">
+        <h3 class="case-label scroll-reveal">Product Decisions</h3>
+        <div class="case-two-col">
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Minimal registration</strong></p>
+                <p class="case-text">
+                    Tracking needed to be fast and repeatable. The system prioritizes a minimal
+                    set of inputs (intensity, type, trigger) to reduce friction and increase
+                    consistency over time.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Hierarchy before action</strong></p>
+                <p class="case-text">
+                    Users often don't know where to focus. The system organizes tics by priority
+                    before suggesting any action, guiding attention instead of overwhelming the user.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Age-adaptive system</strong></p>
+                <p class="case-text">
+                    Children, adults and caregivers interpret information differently. Instead of a
+                    single interface, the system adapts language, tone and content based on the
+                    user's age and responses.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Context-driven content</strong></p>
+                <p class="case-text">
+                    Static recommendations often feel generic and disconnected. Content is generated
+                    and adjusted based on user input, ensuring relevance to the current situation.
+                    AI is used as a support layer to adapt content dynamically.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- 4. Design Decisions -->
+    <section class="case-section">
+    <div class="portfolio-container">
+
+        <h3 class="case-label scroll-reveal">Design Decisions</h3>
+
+        <p class="case-text scroll-reveal" style="max-width: 640px; margin-bottom: 3rem; font-style: italic;">
+            The interface was designed to reduce cognitive load for younger users while
+            maintaining clarity for adults. Visual hierarchy, spacing and language were
+            simplified to ensure accessibility across age groups.
+        </p>
+
+        <div class="case-two-col">
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Reduced input complexity</strong></p>
+                <p class="case-text">
+                    Users needed to register tics frequently, often in real-life situations.
+                    Complex forms caused friction and reduced consistency over time.
+                    The interface was simplified to a small set of essential inputs,
+                    making tracking fast and repeatable.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Age-adaptive interface</strong></p>
+                <p class="case-text">
+                    Children and adults process information differently — both visually and linguistically.
+                    A single interface created confusion or disengagement depending on the user.
+                    The interface adapts language, tone and visual complexity based on age,
+                    ensuring accessibility across user types.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Progressive disclosure of information</strong></p>
+                <p class="case-text">
+                    Showing too much information at once overwhelmed users, especially younger ones.
+                    At the same time, hiding too much limited usefulness for caregivers and specialists.
+                    Information is revealed progressively, allowing simple interaction first and
+                    deeper understanding when needed.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Visual hierarchy for quick interpretation</strong></p>
+                <p class="case-text">
+                    Users needed to quickly understand patterns and progress without deep analysis.
+                    Flat or dense layouts made interpretation slow and effortful.
+                    Clear visual hierarchy was applied to highlight intensity, frequency and progress,
+                    reducing cognitive load.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- 5. Trade-offs -->
+    <section class="case-section">
+    <div class="portfolio-container">
+        <h3 class="case-label scroll-reveal">Trade-offs</h3>
+        <div class="case-two-col">
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Personalization vs. Consistency</strong></p>
+                <p class="case-text">
+                    Adapting content dynamically increases relevance but reduces uniformity.
+                    The system balances this by keeping structure consistent while allowing
+                    content to vary.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Simplicity vs. Depth</strong></p>
+                <p class="case-text">
+                    A simpler interface improves usability, but limits the amount of information
+                    shown at once. The system prioritizes clarity and progressive disclosure.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- 6. Interface -->
     <section class="case-section">
     <div class="portfolio-container">
 
@@ -97,7 +237,7 @@
             <div class="case-interface-item scroll-reveal">
                 <div class="case-interface-info">
                     <h4 class="case-interface-title">Dashboard</h4>
-                    <p class="case-interface-desc">Visão geral do progresso do paciente e indicadores de intensidade.</p>
+                    <p class="case-interface-desc">Overview of patient progress and intensity indicators.</p>
                 </div>
                 <div class="case-interface-image">
                     <img src="assets/ticcare-dashboard.png" alt="TicCare — Dashboard" loading="lazy">
@@ -106,28 +246,28 @@
 
             <div class="case-interface-item scroll-reveal">
                 <div class="case-interface-info">
-                    <h4 class="case-interface-title">Diário de Tiques</h4>
-                    <p class="case-interface-desc">Registro diário utilizado pelo paciente para acompanhar episódios, intensidade e possíveis gatilhos.</p>
+                    <h4 class="case-interface-title">Tic Diary</h4>
+                    <p class="case-interface-desc">Daily register used by the patient to track episodes, intensity and possible triggers.</p>
                 </div>
                 <div class="case-interface-image">
-                    <img src="assets/ticcare-mobile-mockup.png" alt="TicCare — Diário de Tiques" loading="lazy">
+                    <img src="assets/ticcare-mobile-mockup.png" alt="TicCare — Tic Diary" loading="lazy">
                 </div>
             </div>
 
             <div class="case-interface-item scroll-reveal">
                 <div class="case-interface-info">
-                    <h4 class="case-interface-title">Hierarquia de Tiques</h4>
-                    <p class="case-interface-desc">Ferramenta utilizada para organizar e priorizar comportamentos antes do início do programa.</p>
+                    <h4 class="case-interface-title">Tic Hierarchy</h4>
+                    <p class="case-interface-desc">Tool used to organize and prioritize behaviors before the program begins.</p>
                 </div>
                 <div class="case-interface-image">
-                    <img src="assets/ticcare-hierarchy.png" alt="TicCare — Hierarquia de Tiques" loading="lazy">
+                    <img src="assets/ticcare-hierarchy.png" alt="TicCare — Tic Hierarchy" loading="lazy">
                 </div>
             </div>
 
             <div class="case-interface-item scroll-reveal">
                 <div class="case-interface-info">
                     <h4 class="case-interface-title">Admin Dashboard</h4>
-                    <p class="case-interface-desc">Painel administrativo utilizado pela especialista para acompanhar pacientes e analisar dados da plataforma.</p>
+                    <p class="case-interface-desc">Administrative panel used by the specialist to monitor patients and analyze platform data.</p>
                 </div>
                 <div class="case-interface-image">
                     <img src="assets/ticcare-admin.png" alt="TicCare — Admin Dashboard" loading="lazy">
