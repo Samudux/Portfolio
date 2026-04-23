@@ -65,6 +65,10 @@
         .print-btn:hover { opacity: 0.85; }
 
         /* ---- PRINT: invert to white ---- */
+        @page {
+            margin: 1.2cm 1cm;
+        }
+
         @media print {
             :root {
                 --color-bg: #fff;
@@ -75,17 +79,23 @@
                 --color-border: #ddd;
             }
             .print-bar { display: none; }
-            body { font-size: 12px; background: #fff; color: #0f0f0f; }
-            .cv-name { color: #0f0f0f; }
-            .cv-header { border-bottom-color: #0f0f0f; }
+            body { font-size: 10.5px; background: #fff; color: #0f0f0f; line-height: 1.5; }
+            .cv-page { padding: 1.25rem 1.75rem; }
+            .cv-name { color: #0f0f0f; font-size: 1.6rem; }
+            .cv-header { padding-bottom: 0.75rem; margin-bottom: 0.75rem; border-bottom-color: #0f0f0f; }
+            .cv-section { margin-bottom: 1rem; }
+            .cv-contact { line-height: 1.7; }
             .cv-contact a { color: #444; }
-            .cv-section-title { color: #888; border-bottom-color: #ddd; }
-            .cv-profile p { color: #444; }
+            .cv-section-title { color: #888; border-bottom-color: #ddd; margin-bottom: 0.5rem; padding-bottom: 0.25rem; }
+            .cv-profile p { color: #444; line-height: 1.5; }
             .cv-skill { border-color: #ddd; color: #444; }
-            .cv-project, .cv-edu-item { border-bottom-color: #ddd; }
+            .cv-project { border-bottom-color: #ddd; padding: 0.5rem 0; page-break-inside: avoid; }
+            .cv-edu-item { border-bottom-color: #ddd; padding: 0.4rem 0; page-break-inside: avoid; }
             .cv-project-meta, .cv-edu-meta { color: #888; }
             .cv-project-title, .cv-edu-title { color: #0f0f0f; }
             .cv-project-desc, .cv-edu-institution { color: #444; }
+            .cv-skills { gap: 0.3rem; }
+            .cv-skill { padding: 0.15rem 0.5rem; }
         }
 
         /* ---- LAYOUT ---- */
