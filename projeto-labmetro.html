@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LABMETRO VPS — Calibration Certificate Generator · Samuel Almeida</title>
+    <meta name="description" content="Calibration Certificate Generator for LABMETRO VPS — internal web tool built with React, reducing certificate generation from 30 minutes to under 2. Case study by Samuel Almeida." />
+
+    <!-- OG / Social -->
+    <meta property="og:title" content="LABMETRO VPS — Calibration Certificate Generator · Samuel Almeida" />
+    <meta property="og:description" content="Internal tooling for an ISO 17025-accredited calibration lab. React app that automates certificate generation, unit conversion and ABNT compliance." />
+    <meta property="og:image" content="https://samudux.github.io/Portfolio/assets/cert-hero.png" />
+    <meta property="og:url" content="https://samudux.github.io/Portfolio/projeto-labmetro.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===================== NAVIGATION ===================== -->
+<nav id="navbar">
+<div class="nav-container">
+<a href="index.html" class="nav-logo">Samuel Almeida</a>
+<ul class="nav-links">
+<li><a href="index.html#work">Work</a></li>
+<li><a href="index.html#about">About</a></li>
+<li><a href="index.html#expertise">Expertise</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+<!-- ===================== CASE STUDY ===================== -->
+<div class="case-page">
+
+    <!-- Hero -->
+    <section class="case-hero">
+    <div class="portfolio-container">
+
+        <a href="index.html#work" class="project-back-link">← Back to projects</a>
+
+        <div class="case-hero-content scroll-reveal">
+            <div class="case-meta">
+                <span class="case-tag">REAL PROJECT</span>
+                <span class="case-tag">INTERNAL TOOLING</span>
+                <span class="case-tag">REACT</span>
+                <span class="case-tag">IN PRODUCTION</span>
+            </div>
+            <h1 class="case-title">LABMETRO VPS</h1>
+            <p class="case-subtitle">Calibration Certificate Generator</p>
+        </div>
+
+        <div class="case-hero-image scroll-reveal" style="max-width: 960px; margin: 0 auto;">
+            <img src="assets/cert-hero.png" alt="LABMETRO VPS — Calibration Certificate Generator" loading="lazy">
+        </div>
+
+    </div>
+    </section>
+
+    <!-- 1. Context -->
+    <section class="case-section">
+    <div class="portfolio-container">
+        <div class="case-block--narrow scroll-reveal">
+            <h3 class="case-label">Context</h3>
+            <p class="case-text">
+                LABMETRO VPS is an accredited calibration laboratory operating under
+                ABNT NBR ISO/IEC 17025:2017 — the international standard for testing
+                and calibration laboratories. As part of each job, the lab issues a formal
+                Calibration Certificate: a technically precise document recording equipment data,
+                measurement results, uncertainties, standard references and environmental conditions.
+            </p>
+            <p class="case-text" style="margin-top: 1rem;">
+                Before this tool existed, every certificate was produced manually — a technician
+                would fill a template field by field, calculate error percentages by hand,
+                format two separate PDF pages, and merge them into a single file.
+                The process took 20 to 30 minutes per certificate and introduced
+                consistent, hard-to-detect errors.
+            </p>
+        </div>
+    </div>
+    </section>
+
+    <!-- 2. Problem & Solution -->
+    <section class="case-section">
+    <div class="portfolio-container">
+        <div class="case-two-col">
+            <div class="case-block scroll-reveal">
+                <h3 class="case-label">Problem</h3>
+                <p class="case-text">
+                    Three compounding problems were identified. First, the average indication error
+                    was being recorded in measurement units instead of percentage —
+                    a direct ABNT violation that went undetected because the calculation
+                    was done manually each time. Second, certificates required two separate PDFs
+                    (SI and imperial units) that had to be manually merged or sent as two files.
+                    Third, standardized ABNT text blocks were typed from scratch on every certificate,
+                    creating wording variations that constitute a compliance risk under audit.
+                </p>
+            </div>
+            <div class="case-block scroll-reveal">
+                <h3 class="case-label">Solution</h3>
+                <p class="case-text">
+                    A browser-based web application where a technician fills a structured form
+                    and generates a fully formatted, two-page calibration certificate
+                    as a single unified PDF — in under two minutes.
+                    Calculations are automated and correct per ABNT.
+                    Unit conversion is handled automatically.
+                    Standardized text blocks are inserted verbatim.
+                    No backend, no installation, no data loss between sessions.
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- 3. Interface -->
+    <section class="case-section">
+    <div class="portfolio-container">
+
+        <h2 class="case-section-title scroll-reveal">Interface</h2>
+
+        <div class="case-interfaces">
+
+            <div class="case-interface-item scroll-reveal">
+                <div class="case-interface-info">
+                    <h4 class="case-interface-title">Structured Form</h4>
+                    <p class="case-interface-desc">Sections for certificate metadata, client data, equipment under calibration, calibration standards, environmental conditions and measurement points. Organized to match the technician's mental model — not the output document structure.</p>
+                </div>
+                <div class="case-interface-image">
+                    <img src="assets/cert-hero.png" alt="LABMETRO VPS — Form" loading="lazy">
+                </div>
+            </div>
+
+            <div class="case-interface-item scroll-reveal">
+                <div class="case-interface-info">
+                    <h4 class="case-interface-title">Real-time Preview & PDF Export</h4>
+                    <p class="case-interface-desc">As the technician fills the form, calculations update in real time. A single export generates both pages — SI and imperial — as one unified PDF, with dynamic height matching the actual rendered content.</p>
+                </div>
+                <div class="case-interface-image">
+                    <img src="assets/cert-form.png" alt="LABMETRO VPS — PDF Preview" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- 4. Technical Decisions -->
+    <section class="case-section">
+    <div class="portfolio-container">
+        <h3 class="case-label scroll-reveal">Technical Decisions</h3>
+        <div class="case-two-col">
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>No backend</strong></p>
+                <p class="case-text">
+                    All computation and PDF generation happens in the browser.
+                    This eliminates hosting complexity and network dependency —
+                    critical for a lab environment where a stable connection
+                    cannot always be assumed. Draft persistence via localStorage
+                    allows resuming across sessions without data loss.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Dynamic-height PDF generation</strong></p>
+                <p class="case-text">
+                    Certificate length varies by number of measurement points.
+                    Forcing a fixed A4 height caused content to be clipped.
+                    Each page is measured at runtime (<code>element.offsetHeight</code>)
+                    and PDF dimensions are set dynamically — no content is ever cut off,
+                    regardless of certificate length.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Two-page unified export</strong></p>
+                <p class="case-text">
+                    Page 1 (N.m) is captured as a jsPDF instance. Page 2 (lbf.ft)
+                    is captured as a canvas and added as a new page with exact dimensions.
+                    This avoids the page-break detection issues that arise
+                    when exporting both pages in a single pass.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Calculation correctness</strong></p>
+                <p class="case-text">
+                    The average indication error is the arithmetic mean of individual
+                    percentage errors — not the percentage of the mean absolute error.
+                    These are mathematically different. The formula was confirmed against
+                    the client's own Excel reference model before implementation.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- 5. Delivery -->
+    <section class="case-section">
+    <div class="portfolio-container">
+        <div class="case-block--narrow scroll-reveal">
+            <h3 class="case-label">Delivery Process</h3>
+            <p class="case-text">
+                The project was delivered in two formal feedback rounds.
+                Round 1 covered the core feature set: unified PDF, correct error percentage,
+                dual-unit display and structured form fields.
+                Round 2 addressed compliance refinements: automatic ABNT text block insertion,
+                signatures consolidated to the final page, and the accreditation line on page 2.
+            </p>
+            <p class="case-text" style="margin-top: 1rem;">
+                Each round was reviewed against a real certificate issued under Cgcre audit
+                and the laboratory's internal Excel calculation model,
+                used as ground truth for formula validation.
+            </p>
+        </div>
+    </div>
+    </section>
+
+    <!-- 6. Results -->
+    <section class="case-section">
+    <div class="portfolio-container">
+        <h3 class="case-label scroll-reveal">Results</h3>
+        <div class="case-two-col">
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>20–30 min → under 2 min</strong></p>
+                <p class="case-text">
+                    Certificate generation time reduced by over 90%.
+                    The tool is in active use for real client jobs.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Calculation errors eliminated</strong></p>
+                <p class="case-text">
+                    Error percentage is now computed automatically and correctly per ABNT —
+                    a violation that previously went undetected in every manual certificate.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Audit-ready wording</strong></p>
+                <p class="case-text">
+                    Standardized ABNT text blocks are inserted verbatim on every certificate —
+                    no manual copy-paste, no wording variation across documents.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Single-file output</strong></p>
+                <p class="case-text">
+                    Both pages exported as one unified PDF.
+                    No post-processing, no risk of sending two separate files.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="contact" class="portfolio-footer">
+<div class="portfolio-container">
+<div class="footer-content">
+<h2 class="footer-title">Let's talk?</h2>
+<a href="mailto:samudux66@gmail.com" class="footer-email">samudux66@gmail.com</a>
+<div class="footer-links">
+<a href="https://www.linkedin.com/in/samuel-almeida-27a087388/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a href="https://x.com/Samuel151093" target="_blank" rel="noopener noreferrer">X</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2025 Samuel Almeida — Product Designer (UX/UI)</p>
+</div>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
