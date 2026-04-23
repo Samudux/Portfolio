@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Tattoo Studio — Samuel Almeida</title>
+    <meta name="description" content="Diego Tattoo Studio — Premium landing page with conversion strategy via WhatsApp. Case study by Samuel Almeida, Product Designer." />
+
+    <!-- OG / Social -->
+    <meta property="og:title" content="Diego Tattoo Studio — Samuel Almeida" />
+    <meta property="og:description" content="Landing page for a tattoo studio: premium positioning, visual identity and WhatsApp conversion flow. HTML · CSS · JavaScript." />
+    <meta property="og:image" content="https://samudux.github.io/Portfolio/assets/diego-hero.png" />
+    <meta property="og:url" content="https://samudux.github.io/Portfolio/projeto-diegotattoo.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===================== NAVIGATION ===================== -->
+<nav id="navbar">
+<div class="nav-container">
+<a href="index.html" class="nav-logo">Samuel Almeida</a>
+<ul class="nav-links">
+<li><a href="index.html#work">Work</a></li>
+<li><a href="index.html#about">About</a></li>
+<li><a href="index.html#expertise">Expertise</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+<!-- ===================== CASE STUDY ===================== -->
+<div class="case-page">
+
+    <!-- Hero -->
+    <section class="case-hero">
+    <div class="portfolio-container">
+
+        <a href="index.html#work" class="project-back-link">← Back to projects</a>
+
+        <div class="case-hero-content scroll-reveal">
+            <div class="case-meta">
+                <span class="case-tag">REAL PROJECT</span>
+                <span class="case-tag">UI DESIGN</span>
+                <span class="case-tag">FRONT-END</span>
+                <span class="case-tag">CRO</span>
+            </div>
+            <h1 class="case-title">Diego Tattoo Studio</h1>
+            <p class="case-subtitle">Premium positioning, conversion via WhatsApp, original visual identity</p>
+        </div>
+
+        <div class="case-hero-image scroll-reveal" style="max-width: 960px; margin: 0 auto;">
+            <img src="assets/diego-hero.png" alt="Diego Tattoo Studio — Landing Page" loading="lazy">
+        </div>
+
+    </div>
+    </section>
+
+    <!-- 1. Context -->
+    <section class="case-section">
+    <div class="portfolio-container">
+        <div class="case-block--narrow scroll-reveal">
+            <h3 class="case-label">Context</h3>
+            <p class="case-text">
+                Diego is a tattoo artist with over 12 years of experience, specialized in Realism,
+                Blackwork and Fine Line. Despite a high-quality portfolio, his digital presence was
+                nonexistent — referrals came exclusively through Instagram and word of mouth.
+                The goal was to create a landing page that positioned the studio in the premium
+                segment, built trust quickly, and converted visitors into bookings via WhatsApp.
+            </p>
+        </div>
+    </div>
+    </section>
+
+    <!-- 2. Problem & Solution -->
+    <section class="case-section">
+    <div class="portfolio-container">
+        <div class="case-two-col">
+            <div class="case-block scroll-reveal">
+                <h3 class="case-label">Problem</h3>
+                <p class="case-text">
+                    Tattoo studios usually fail in one of two directions: generic visuals
+                    (Wix/Squarespace templates that don't communicate identity) or
+                    portfolio without CTA (beautiful Instagram, but no conversion funnel).
+                    The challenge here was double: create a visual identity strong enough
+                    to communicate premium art — not commodity service — and build
+                    a page flow that actually sells.
+                </p>
+            </div>
+            <div class="case-block scroll-reveal">
+                <h3 class="case-label">Solution</h3>
+                <p class="case-text">
+                    A custom design system built from scratch — "The Noir Gallery" —
+                    with a near-black background, five surface layers for depth,
+                    and a single warm gold accent used with maximum restraint.
+                    Every section was structured around a conversion sequence:
+                    authority → trust → action, with each block removing
+                    an implicit objection before the visitor articulates it.
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- 3. Design System -->
+    <section class="case-section">
+    <div class="portfolio-container">
+
+        <h3 class="case-label scroll-reveal">Design System — The Noir Gallery</h3>
+
+        <p class="case-text scroll-reveal" style="max-width: 640px; margin-bottom: 3rem; font-style: italic;">
+            Before any component, I defined a complete design system in CSS custom properties
+            — setting the visual language that would make every element feel intentional.
+        </p>
+
+        <div class="case-two-col">
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Palette</strong></p>
+                <p class="case-text">
+                    Base background at <code>#0c0c0c</code> — near-black, not pure black,
+                    to avoid harshness. Five <code>--surface-*</code> levels for depth without borders.
+                    Gold accent <code>#e9c176</code> as the only warm point of color —
+                    maximum attention when used, invisible when not needed.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Typography — 3 fonts, 3 roles</strong></p>
+                <p class="case-text">
+                    <strong>Epilogue</strong> (headlines) — condensed, 900 weight, italic for emotion.
+                    <strong>Manrope</strong> (body) — humanist, 300 weight for sophistication.
+                    <strong>Space Grotesk</strong> (labels/UI) — technical, for buttons and tags.
+                    Each font has a single job and never competes with the others.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Grid & Spacing</strong></p>
+                <p class="case-text">
+                    Fixed 1120px container with responsive padding via
+                    <code>max(24px, calc((100% - 1120px) / 2))</code> — aligns perfectly
+                    from mobile to ultrawide without extra media queries.
+                    8pt baseline with <code>clamp()</code> scale on sections —
+                    consistent rhythm at any viewport.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Custom cursor</strong></p>
+                <p class="case-text">
+                    A tattoo needle built in pure CSS using only <code>::before</code>
+                    and <code>::after</code> on the cursor element — no external SVG.
+                    The shaft and machine body are rectangles rotated 45° with
+                    <code>transform-origin</code> at the tip. Identity reinforcement
+                    without being literal.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- 4. Image Direction -->
+    <section class="case-section">
+    <div class="portfolio-container">
+
+        <h3 class="case-label scroll-reveal">Image Direction</h3>
+
+        <p class="case-text scroll-reveal" style="max-width: 640px; margin-bottom: 3rem; font-style: italic;">
+            The visual material delivered by the client wasn't compatible with the premium positioning
+            of the brand. The solution required reconstructing the context — not just adjusting it.
+        </p>
+
+        <div class="case-two-col">
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Main photo — studio reconstruction</strong></p>
+                <p class="case-text">
+                    The original environment did not reflect the intended premium positioning.
+                    The scene was redesigned — replacing cold lighting and neutral walls
+                    with a darker, more controlled studio aesthetic aligned with the brand.
+                    Final adjustments were completed in Figma.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Portfolio gallery — cohesion across sessions</strong></p>
+                <p class="case-text">
+                    The tattoo photos arrived with variable quality — some compressed,
+                    others with lighting incompatible with the site's dark theme.
+                    Each image went through AI upscaling and exposure/color adjustment
+                    to darken the environment and maintain coherence with the
+                    <code>#0c0c0c</code> palette.
+                    The result: a gallery where every piece looks photographed
+                    in the same studio, even coming from different sessions and contexts.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- 5. Interface -->
+    <section class="case-section">
+    <div class="portfolio-container">
+
+        <h2 class="case-section-title scroll-reveal">Interface</h2>
+
+        <div class="case-interfaces">
+
+            <div class="case-interface-item scroll-reveal">
+                <div class="case-interface-info">
+                    <h4 class="case-interface-title">Hero & Identity</h4>
+                    <p class="case-interface-desc">Headline in two registers: white declaration + gold italic impact. Immediate WhatsApp CTA. Radial glow background for depth without a hero image.</p>
+                </div>
+                <div class="case-interface-image">
+                    <img src="assets/diego-hero.png" alt="Diego Tattoo Studio — Hero" loading="lazy">
+                </div>
+            </div>
+
+            <div class="case-interface-item scroll-reveal">
+                <div class="case-interface-info">
+                    <h4 class="case-interface-title">Portfolio Gallery</h4>
+                    <p class="case-interface-desc">Asymmetric 3-column grid with the central cell spanning 2 rows. The Blackwork lion dominates the center — deliberate visual hierarchy guiding the eye to the most technical piece first. Each image with manually calibrated object-position.</p>
+                </div>
+                <div class="case-interface-image">
+                    <img src="assets/diego-gallery.png" alt="Diego Tattoo Studio — Gallery" loading="lazy">
+                </div>
+            </div>
+
+            <div class="case-interface-item scroll-reveal">
+                <div class="case-interface-info">
+                    <h4 class="case-interface-title">CTA Final</h4>
+                    <p class="case-interface-desc">4-layer conversion structure: direct headline → concrete promise → first-person desire-oriented button → trust signals placed below the CTA, exactly where the hesitation happens.</p>
+                </div>
+                <div class="case-interface-image">
+                    <img src="assets/diego-cta.png" alt="Diego Tattoo Studio — CTA" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- 5. Conversion Flow -->
+    <section class="case-section">
+    <div class="portfolio-container">
+        <h3 class="case-label scroll-reveal">Conversion Flow</h3>
+        <p class="case-text scroll-reveal" style="max-width: 640px; margin-bottom: 2rem;">
+            Each section answers an implicit objection before the visitor articulates it.
+        </p>
+        <div class="case-two-col">
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Hero → Portfolio → Expertise</strong></p>
+                <p class="case-text">
+                    Value proposition first, then proof of quality, then technical authority.
+                    The visitor builds confidence progressively — not through claims, but through evidence.
+                </p>
+            </div>
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Biosafety → Testimonials → CTA</strong></p>
+                <p class="case-text">
+                    A dedicated biosafety section that most studios don't publish online —
+                    a direct trust signal answering the safety question before it's asked.
+                    Social proof, then a final CTA that removes the last objection:
+                    "no initial commitment."
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- 6. Technical Highlights -->
+    <section class="case-section">
+    <div class="portfolio-container">
+        <h3 class="case-label scroll-reveal">Technical Highlights</h3>
+        <div class="case-two-col">
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Scroll reveal without a library</strong></p>
+                <p class="case-text">
+                    <code>IntersectionObserver</code> with threshold and delay via CSS classes
+                    (<code>delay-2</code>, <code>delay-3</code>) — smooth entrance animations
+                    without GSAP or AOS dependency.
+                </p>
+            </div>
+
+            <div class="case-block scroll-reveal">
+                <p class="case-text"><strong>Responsiveness without a framework</strong></p>
+                <p class="case-text">
+                    Zero Bootstrap or Tailwind. Native CSS Grid, <code>clamp()</code>
+                    for fluid typography, surgical media queries only where truly necessary.
+                    Total bundle under 50kb excluding images.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- 7. Learnings -->
+    <section class="case-section">
+    <div class="portfolio-container">
+        <div class="case-block--narrow scroll-reveal">
+            <h3 class="case-label">Learnings</h3>
+            <p class="case-text">
+                The biggest improvements in perceived quality came from copy adjustments —
+                not visual redesigns. The CTA subtitle went through three versions
+                before communicating both concreteness and emotion simultaneously.
+                Copy is product.
+            </p>
+            <p class="case-text" style="margin-top: 1.5rem;">
+                Visual hierarchy is strategy. The decision to reduce saturation on the eagle
+                and let the central lion dominate isn't aesthetic preference —
+                it's deliberate attention guidance. And placing "no initial commitment"
+                below the CTA (not at the top) works because it arrives exactly
+                when the visitor already wants to click but still hesitates.
+            </p>
+        </div>
+    </div>
+    </section>
+
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="contact" class="portfolio-footer">
+<div class="portfolio-container">
+<div class="footer-content">
+<h2 class="footer-title">Let's talk?</h2>
+<a href="mailto:samudux66@gmail.com" class="footer-email">samudux66@gmail.com</a>
+<div class="footer-links">
+<a href="https://www.linkedin.com/in/samuel-almeida-27a087388/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a href="https://x.com/Samuel151093" target="_blank" rel="noopener noreferrer">X</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2025 Samuel Almeida — Product Designer (UX/UI)</p>
+</div>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
