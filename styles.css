@@ -756,14 +756,18 @@ section[id] {
 
 .case-two-col {
     display: grid;
-    grid-template-columns: minmax(0, 480px) minmax(0, 480px);
+    grid-template-columns: repeat(2, minmax(0, 440px));
     justify-content: space-between;
-    column-gap: clamp(5rem, 8vw, 8rem);
+    column-gap: clamp(6rem, 10vw, 10rem);
     row-gap: clamp(5rem, 7vw, 7rem);
 }
 
 .case-two-col > * {
-    max-width: 480px;
+    max-width: 440px;
+}
+
+.case-two-col > .case-block {
+    max-width: 440px;
 }
 
 .case-block {
