@@ -781,6 +781,23 @@ section[id] {
     max-width: 640px;
 }
 
+.case-intro-text {
+    max-width: 520px;
+    margin-left: 0;
+    margin-bottom: 5rem;
+    font-style: italic;
+    line-height: 1.9;
+    font-size: 1.05rem;
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+    .case-intro-text {
+        max-width: 100%;
+        margin-bottom: 3rem;
+    }
+}
+
 .case-label {
     font-family: var(--font-mono);
     font-size: 0.75rem;
