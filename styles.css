@@ -746,7 +746,7 @@ section[id] {
 }
 
 .case-section {
-    padding: 5rem 0;
+    padding: 6rem 0;
     border-top: 1px solid var(--color-border);
 }
 
@@ -757,7 +757,7 @@ section[id] {
 .case-two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 5rem;
 }
 
 .case-block {
@@ -774,17 +774,19 @@ section[id] {
     color: var(--color-accent);
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.75rem;
 }
 
 .case-text {
     font-size: 1rem;
     color: var(--color-text-secondary);
-    line-height: 1.8;
+    line-height: 1.85;
+    max-width: 52ch;
+    letter-spacing: 0.01em;
 }
 
 .case-text + .case-text {
-    margin-top: 0.75rem;
+    margin-top: 1.25rem;
 }
 
 .case-text ul,
