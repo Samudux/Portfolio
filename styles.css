@@ -772,6 +772,9 @@ section[id] {
 
 .case-block {
     max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
 
 .case-block--narrow {
@@ -787,6 +790,15 @@ section[id] {
     margin-bottom: 1.75rem;
 }
 
+.case-subtitle {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    line-height: 1.4;
+    margin: 0;
+}
+
 .case-text {
     font-size: 1rem;
     color: var(--color-text-secondary);
@@ -794,10 +806,15 @@ section[id] {
     max-width: 48ch;
     letter-spacing: 0.01em;
     overflow-wrap: break-word;
+    margin: 0;
 }
 
-.case-text + .case-text {
-    margin-top: 1.25rem;
+.case-meta {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    opacity: 0.6;
+    margin: 0;
 }
 
 .case-text ul,
